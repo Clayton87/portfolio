@@ -1,0 +1,377 @@
+/* Configuração global */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    padding-top: 100px; /* Ajuste para evitar que o conteúdo fique atrás do cabeçalho */
+}
+
+/* Estilos do cabeçalho fixo */
+#header {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 80px;
+}
+#logo h1 {
+    margin: 0;
+    font-size: 28px;
+    text-align: center;
+}
+#logo h1 span {
+    color: white;
+}
+#menu {
+    margin-top: 10px;
+    display: flex;
+}
+#menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+#menu a:hover {
+    color: #007bff;
+}
+#menu a.active {
+    color: #007bff;
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+}
+
+/* Estilos da página Home */
+.hero-section {
+    background: #007bff;
+    color: white;
+    padding: 100px 20px 80px;
+    text-align: center;
+    font-size: 24px;
+    border-bottom: 4px solid #0056b3;
+}
+.hero-section h1 {
+    margin: 0;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.hero-section p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.services-container {
+    max-width: 900px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+}
+.service-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.service-box h3 {
+    color: #007bff;
+    font-size: 24px;
+}
+.service-box p {
+    font-size: 16px;
+    color: #333;
+}
+
+.cta-section {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 50px 20px;
+}
+.cta-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.cta-section p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+}
+.cta-section a {
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.cta-section a:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-box {
+        width: 100%;
+    }
+}
+
+/* Estilos para o texto antes do formulário */
+.intro-container {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+/* Estilos para o formulário de contato */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.contact-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.contact-form textarea {
+    resize: vertical;
+    height: 120px;
+}
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos das seções de formação, ferramentas e competências */
+.formation-container,
+.tools-container,
+.skills-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.formation-container:hover,
+.tools-container:hover,
+.skills-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.formation-container h2,
+.tools-container h2,
+.skills-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+.formation-container ul,
+.tools-container ul,
+.skills-container ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+.formation-container li,
+.tools-container li,
+.skills-container li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Ajustar imagens dentro dos blocos */
+.formation-container img,
+.tools-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Seção Sobre mim */
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 20px 40px; /* Reduzido o padding-top de 120px para 80px */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-container img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 20%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
+
+.about-container ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.about-container li {
+    margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 100px 15px 20px;
+    }
+    .about-container img {
+        max-width: 120px;
+    }
+    .about-container p, .about-container ul {
+        font-size: 16px;
+    }
+}
+
+/* Texto introdutório */
+.intro-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 80px 5px 20px; /* Espaçamento superior reduzido para aproximar do cabeçalho */
+}
+
+/* Estilos para os blocos de projeto */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.project-block {
+    width: 100%;
+    max-width: 350px;
+    margin: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.project-block:hover {
+    transform: translateY(-10px);
+}
+.project-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.project-block h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.project-block p {
+    color: #555;
+    font-size: 16px;
+    text-align: justify;
+}
+.project-block a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.project-block a:hover {
+    background-color: #0056b3;
+}

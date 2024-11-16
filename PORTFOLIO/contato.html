@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Página de Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho fixo -->
+    <div id="header">
+        <div id="logo">
+            <h1>Port<span class="white">fólio</span></h1>
+        </div>
+        <div id="menu">
+            <a href="index.html">Home</a>
+            <a href="sobremim.html">Sobre mim</a>
+            <a href="formacao.html">Formação</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="contato.html" class="active">Contato</a>
+        </div>
+    </div>
+
+    <!-- Texto antes do formulário -->
+    <div class="intro-container">
+        <p>
+            Vamos construir algo incrível juntos! Entre em contato para agendarmos uma conversa e entender melhor como posso te ajudar.
+        </p>
+    </div>
+
+    <!-- Formulário de Contato -->
+    <div class="contact-container">
+        <form class="contact-form" action="enviar.php" method="post">
+            <h2>Contato</h2>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
